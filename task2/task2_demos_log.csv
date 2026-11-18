@@ -1,0 +1,75 @@
+dataset_episode,schedule_row,type,lighting,T1,T2,T3,placement,pre_stacked,pre_stack_offset,kept,frames,seconds,note,timestamp
+0,0,full,L1,purple,red,yellow,exact,none,,0,936,31,[Cd,2026-11-17_21:59:54
+1,0,full,L1,purple,red,yellow,exact,none,,0,1054,35,both not set correctly,2026-11-17_22:01:04
+2,1,full,L1,purple,yellow,red,exact,none,,1,1722,57,,2026-11-17_22:04:22
+3,2,full,L1,yellow,purple,red,exact,none,,1,1732,57,,2026-11-17_22:06:03
+4,3,full,L1,yellow,red,purple,exact,none,,1,1787,59,,2026-11-17_22:07:45
+5,4,full,L1,red,purple,yellow,exact,none,,0,958,31,,2026-11-17_22:08:49
+6,5,full,L2,yellow,purple,red,jitter ~1cm/~10deg,none,,0,1823,60,DISCARD TOPPLED,2026-11-17_22:10:37
+7,5,full,L2,yellow,purple,red,jitter ~1cm/~10deg,none,,1,1833,61,,2026-11-17_22:16:11
+8,6,full,L2,yellow,red,purple,jitter ~1cm/~10deg,none,,1,1808,60,,2026-11-17_22:17:55
+9,7,pre1,L2,purple,yellow,EMPTY,exact,red already on table mark,~4mm off (vary direction),1,1474,49,started pausing from 7 onwards,2026-11-17_22:20:14
+10,8,full,L2,purple,yellow,red,exact,none,,0,29,0,,2026-11-17_22:20:34
+11,9,full,L2,red,yellow,purple,exact,none,,1,1891,63,,2026-11-17_22:22:05
+12,10,pre2,L3,EMPTY,EMPTY,purple,exact,red+yellow already stacked on table mark,~4mm off (vary direction),1,914,30,,2026-11-17_22:23:29
+13,11,full,L3,red,yellow,purple,jitter ~1cm/~10deg,none,,1,1988,66,,2026-11-17_22:25:07
+14,12,full,L3,red,purple,yellow,jitter ~1cm/~10deg,none,,1,2473,82,recovered last cube,2026-11-17_22:27:01
+15,13,pre2,L3,EMPTY,EMPTY,purple,exact,red+yellow already stacked on table mark,~4mm off (vary direction),1,935,31,,2026-11-17_22:28:23
+16,14,pre1,L3,purple,EMPTY,yellow,jitter ~1cm/~10deg,red already on table mark,centered,1,1489,49,,2026-11-17_22:29:42
+17,15,pre2,L1,EMPTY,purple,EMPTY,exact,red+yellow already stacked on table mark,centered,1,864,28,[C,2026-11-17_22:30:46
+18,16,full,L1,red,purple,yellow,exact,none,,1,1882,62,,2026-11-17_22:32:18
+19,17,pre1,L1,yellow,EMPTY,purple,exact,red already on table mark,centered,1,1345,44,,2026-11-17_22:33:27
+20,18,pre2,L1,purple,EMPTY,EMPTY,jitter ~1cm/~10deg,red+yellow already stacked on table mark,~4mm off (vary direction),1,904,30,,2026-11-17_22:34:22
+21,19,full,L1,red,yellow,purple,exact,none,,1,2360,78,yellow recovered and purple picked from a displaced position,2026-11-17_22:36:05
+22,20,pre1,L2,yellow,purple,EMPTY,jitter ~1cm/~10deg,red already on table mark,centered,1,1321,44,,2026-11-17_22:42:08
+23,21,full,L2,purple,yellow,red,jitter ~1cm/~10deg,none,,1,2079,69,red was not on the marked white spot,2026-11-17_22:43:55
+24,22,pre1,L2,EMPTY,purple,yellow,jitter ~1cm/~10deg,red already on table mark,centered,1,1195,39,,2026-11-17_22:45:20
+25,23,full,L2,yellow,red,purple,jitter ~1cm/~10deg,none,,1,1651,55,,2026-11-17_22:47:06
+26,24,pre2,L2,purple,EMPTY,EMPTY,exact,red+yellow already stacked on table mark,~4mm off (vary direction),1,752,25,,2026-11-17_22:47:58
+27,25,full,L3,purple,yellow,red,exact,none,,1,1730,57,,2026-11-17_22:49:27
+28,26,pre2,L3,EMPTY,purple,EMPTY,jitter ~1cm/~10deg,red+yellow already stacked on table mark,~4mm off (vary direction),1,820,27,,2026-11-17_22:50:21
+29,27,full,L3,purple,red,yellow,jitter ~1cm/~10deg,none,,0,957,31,,2026-11-17_22:51:43
+30,27,full,L3,purple,red,yellow,jitter ~1cm/~10deg,none,,1,1706,56,off the marked white spot,2026-11-17_23:02:04
+31,28,pre1,L3,yellow,EMPTY,purple,jitter ~1cm/~10deg,red already on table mark,centered,1,1339,44,,2026-11-17_23:03:27
+32,29,pre1,L3,purple,yellow,EMPTY,exact,red already on table mark,centered,1,1122,37,,2026-11-17_23:04:36
+33,30,pre1,L1,EMPTY,purple,yellow,exact,red already on table mark,centered,1,1157,38,,2026-11-17_23:06:01
+34,31,full,L1,yellow,red,purple,exact,none,,1,1676,55,,2026-11-17_23:07:28
+35,32,pre2,L1,purple,EMPTY,EMPTY,exact,red+yellow already stacked on table mark,centered,1,699,23,,2026-11-17_23:08:15
+36,33,full,L1,red,purple,yellow,exact,none,,1,1724,57,,2026-11-17_23:09:47
+37,34,full,L1,purple,yellow,red,jitter ~1cm/~10deg,none,,1,1522,50,,2026-11-17_23:11:23
+38,35,full,L2,yellow,purple,red,jitter ~1cm/~10deg,none,,1,1822,60,,2026-11-17_23:13:03
+39,36,pre2,L2,EMPTY,purple,EMPTY,exact,red+yellow already stacked on table mark,~4mm off (vary direction),1,668,22,,2026-11-17_23:14:00
+40,37,full,L2,purple,red,yellow,exact,none,,0,863,28,yellow cube flew off so discarding,2026-11-17_23:15:02
+41,37,full,L2,purple,red,yellow,exact,none,,0,1059,35,messed up,2026-11-17_23:16:40
+42,37,full,L2,purple,red,yellow,exact,none,,1,1836,61,,2026-11-17_23:18:17
+43,38,full,L2,red,yellow,purple,exact,none,,1,1643,54,,2026-11-17_23:19:42
+44,39,pre1,L2,EMPTY,yellow,purple,exact,red already on table mark,centered,1,1292,43,,2026-11-17_23:21:00
+45,40,full,L3,purple,red,yellow,jitter ~1cm/~10deg,none,,1,1436,47,,2026-11-17_23:22:38
+46,41,pre1,L3,purple,EMPTY,yellow,exact,red already on table mark,centered,1,1190,39,purple moved before picking up,2026-11-17_23:24:09
+47,42,full,L3,purple,red,yellow,jitter ~1cm/~10deg,none,,1,1670,55,,2026-11-17_23:25:49
+48,43,full,L3,yellow,purple,red,exact,none,,1,1560,52,,2026-11-17_23:27:12
+49,44,full,L3,purple,red,yellow,exact,none,,1,1488,49,,2026-11-17_23:28:41
+50,45,full,L1,yellow,red,purple,jitter ~1cm/~10deg,none,,1,1435,47,,2026-11-17_23:30:14
+51,46,full,L1,yellow,purple,red,jitter ~1cm/~10deg,none,,1,1634,54,,2026-11-17_23:31:41
+52,47,pre1,L1,EMPTY,yellow,purple,exact,red already on table mark,centered,1,1104,36,,2026-11-17_23:32:53
+53,48,pre2,L1,EMPTY,EMPTY,purple,exact,red+yellow already stacked on table mark,centered,1,711,23,,2026-11-17_23:33:39
+54,49,full,L1,purple,yellow,red,exact,none,,0,1354,45,yellow fell over and red moved from the marked white spot,2026-11-17_23:35:08
+55,49,full,L1,purple,yellow,red,exact,none,,0,406,13,picking up messed up,2026-11-17_23:36:08
+56,49,full,L1,purple,yellow,red,exact,none,,1,1582,52,,2026-11-17_23:37:42
+57,50,full,L2,red,purple,yellow,exact,none,,1,1532,51,,2026-11-17_23:39:11
+58,51,full,L2,yellow,purple,red,jitter ~1cm/~10deg,none,,1,1480,49,,2026-11-17_23:40:35
+59,52,full,L2,red,purple,yellow,jitter ~1cm/~10deg,none,,1,1469,48,,2026-11-17_23:42:02
+60,53,full,L2,red,yellow,purple,jitter ~1cm/~10deg,none,,1,1431,47,,2026-11-17_23:43:18
+61,54,pre1,L2,yellow,purple,EMPTY,exact,red already on table mark,centered,1,1107,36,,2026-11-17_23:44:32
+62,55,full,L3,red,yellow,purple,exact,none,,1,1342,44,,2026-11-17_23:45:58
+63,56,full,L3,yellow,red,purple,exact,none,,1,1254,41,,2026-11-17_23:47:11
+64,57,full,L3,purple,red,yellow,exact,none,,1,1593,53,,2026-11-17_23:48:41
+65,58,full,L3,red,purple,yellow,exact,none,,1,1316,43,,2026-11-17_23:50:01
+66,59,full,L3,yellow,purple,red,exact,none,,0,496,16,placed very close,2026-11-17_23:50:51
+67,59,full,L3,yellow,purple,red,exact,none,,1,2133,71,,2026-11-17_23:52:41
+68,60,full,L1,purple,yellow,red,exact,none,,1,1674,55,,2026-11-17_23:54:29
+69,61,full,L1,yellow,red,purple,exact,none,,1,1319,43,,2026-11-17_23:55:48
+70,62,full,L1,red,yellow,purple,exact,none,,1,1356,45,,2026-11-17_23:57:01
+71,0,full,L1,purple,red,yellow,exact,none,,1,1415,47,,2026-11-18_00:07:09
+72,4,full,L1,red,purple,yellow,exact,none,,1,1370,45,,2026-11-18_00:08:24
+73,8,full,L2,purple,yellow,red,exact,none,,1,1583,52,,2026-11-18_00:09:59
