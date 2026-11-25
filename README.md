@@ -8,9 +8,19 @@
 
 <!-- drop success_1 here -->
 
+
+https://github.com/user-attachments/assets/338f5b25-8b2c-42a8-a752-3b5a42a2040f
+
+
+
 **Rollout 2:** 3 blocks stacked ([mp4](videos/success_2.mp4))
 
 <!-- drop success_2 here -->
+
+
+https://github.com/user-attachments/assets/c669e91b-3c14-4ceb-aefa-b0ae194e0a5a
+
+
 
 ## Workspace
 
