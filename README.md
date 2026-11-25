@@ -1,3 +1,75 @@
+# Task 2 — Block stacking with a single-task ACT policy (SO-101)
+
+*Team: Team 1*
+
+## Policy rollouts
+
+**Rollout 1:** 3 blocks stacked ([mp4](videos/success_1.mp4))
+
+<!-- drop success_1 here -->
+
+**Rollout 2:** 3 blocks stacked ([mp4](videos/success_2.mp4))
+
+<!-- drop success_2 here -->
+
+## Workspace
+
+<img src="docs/images/cube_tray.jpeg" alt="Tray with red, yellow and purple cubes on the blue base board" width="360" align="right">
+
+The policy is designed for a fixed, portable enclosure: blue base board, white canvas walls on three sides and a cloth top with its own light, so the background and illumination travel with the robot into the classroom. A tray with three slots (T1–T3) holds the red, yellow and purple cubes in a shuffled colour assignment; the tower is always built at a fixed white mark on the table in colour order red → yellow → purple. The only camera is the unchanged wrist camera (rotated −90° in software); there is no external camera, so no camera placement or calibration has to be reproduced.
+
+## How the policy was trained
+
+**Data:** 74 teleoperated demonstrations recorded (63 kept; LeRobotDataset v3, 30 fps), following a schedule that shuffles which slot each colour starts in and rotates the enclosure light through three colour settings every 5 episodes. Every demo performs all three placements, so each stage of the growing stack is covered; a fixed LOOK pose before each pick lets the wrist camera see the current stack height, giving the policy a stage cue. After testing showed failures on shifted cubes, 30 position-jitter demos (26 kept) were added.
+
+**Policy:** ACT (chunk 50) trained 80k steps on the base demos (batch 32, image augmentation), then fine-tuned 20k steps on the merged 89-episode set (base + jitter, not jitter alone, to avoid forgetting the original positions) with the vision encoder unfrozen. A full retrain from scratch on the merged data was also run at the last minute; it was not evaluated, and the fine-tuned model worked well, so it was deployed (step 15k, temporal ensembling, coefficient 0.01). Diffusion Policy trained on the same data performed poorly on stacking and was not deployed.
+
+## How it was tested
+
+| Video | Outcome (blocks left stacked) | What happened |
+|---|---|---|
+| [success_1](videos/success_1.mp4) | 3 — success | Stacked well |
+| [success_2](videos/success_2.mp4) | 3 — success | Stacked well |
+
+A block counts only if it remains stacked after the arm withdraws.
+
+Testing was informal: checkpoints were compared by running test rollouts on exact and shifted cube positions, and no systematic success counts were recorded — a limitation of this task. The in-class demonstration succeeded with the fine-tuned policy, so the planned fallback of collecting DAgger correction data in class was not needed.
+
+## Sensitivity to changes in conditions
+
+Intended variations: colour order (shuffled slots), cube position (jitter demos) and lighting (three light colour settings plus augmentation); background is held fixed by the enclosure. Testing before the demo showed the base policy generalized across colour orders but failed on cubes shifted from the nominal slots and under the yellow light setting (L2). The new data we captured and used to finetune our model addressed both these failures. We conducted controlled tests by changing one variable at a time on the fine-tuned model. Image augmentation (LeRobot) does not cover changes in camera pose; here the wrist camera never moves relative to the gripper.
+
+## Failures observed
+
+- Out of distribution configurations of cubes failed. Tried to arrange in a straight line, which was never done in training set - failed
+- Placement errors accumulate up the stack, so the third placement failed when the second was unstable
+- Adding more than 3 cubes confused the model.
+
+## Limitations
+
+No systematic evaluation: reliability is shown by a handful of recorded attempts, not success counts, and the retrain was never evaluated to the extent of Task1 – was driven by intuition.
+
+The policy depends on the enclosure, a fixed stacking location and a fixed colour order; robustness to shifted cubes and to the yellow light setting (L2) was only partly addressed.
+
+## Appendix — what carried over from Task 1
+
+**Wrist camera only.** In Task 1, an external camera that shifted between sessions was the main source of failure we could not fully correct. For stacking, which had to transfer to the classroom, we dropped the external camera and used only the wrist camera, which moves with the gripper and cannot be displaced relative to it.
+
+**Standardized teleoperation.** By the third Task 1 collection we had fixed teleoperation rules, and we kept them. Because the wrist camera sees much less of the workspace, every demonstration follows the same pattern: rise to a high LOOK pose to see the whole workspace and the current stack, pick the next cube, place it, rise again, and repeat until all three are stacked.
+
+**Controlled environment.** As in Task 1's final round, the scene was constrained as much as possible: an enclosure with its own light provided the background and illumination, the tray slots and stacking mark were fixed, and the variation in the data (colour order, three light colour settings) was chosen deliberately and scheduled.
+
+**Data added in stages.** The first dataset taught the policy to pick from three fixed positions with shuffled colours and stack in a fixed order. When testing showed failures on cubes shifted from those positions, we recorded a smaller set of demonstrations with cubes shifted horizontally beside the fixed positions, combined it with the first dataset, and fine-tuned the same ACT policy on all of it. Each round of data collection was driven by a specific observed failure, the same approach as in Task 1.
+
+## Setup pictures
+
+| | |
+|---|---|
+| <img src="docs/images/setup_1.jpeg" alt="Setup photo 1" width="380"> | <img src="docs/images/setup_2.jpeg" alt="Setup photo 2" width="380"> |
+| <img src="docs/images/setup_3.jpeg" alt="Setup photo 3" width="380"> | <img src="docs/images/setup_4.jpeg" alt="Setup photo 4" width="380"> |
+
+---
+
 # HRL SO-101 — team setup (Assignment 2, Task 2)
 
 Everything needed to run our SO-101 arm, trained policies and Task 2 scripts on another
