@@ -4,22 +4,16 @@
 
 ## Policy rollouts
 
-**Rollout 1:** 3 blocks stacked ([mp4](videos/success_1.mp4))
-
-<!-- drop success_1 here -->
-
-
-https://github.com/user-attachments/assets/338f5b25-8b2c-42a8-a752-3b5a42a2040f
-
-
-
-**Rollout 2:** 3 blocks stacked ([mp4](videos/success_2.mp4))
-
-<!-- drop success_2 here -->
-
-
-https://github.com/user-attachments/assets/c669e91b-3c14-4ceb-aefa-b0ae194e0a5a
-
+<table>
+  <tr>
+    <td align="center"><b>Rollout 1:</b> 3 blocks stacked</td>
+    <td align="center"><b>Rollout 2:</b> 3 blocks stacked</td>
+  </tr>
+  <tr>
+    <td><video src="PASTE_SUCCESS_1_LINK" controls muted width="400"></video></td>
+    <td><video src="PASTE_SUCCESS_2_LINK" controls muted width="400"></video></td>
+  </tr>
+</table>
 
 
 ## Workspace
