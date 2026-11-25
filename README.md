@@ -10,8 +10,16 @@
     <td align="center"><b>Rollout 2:</b> 3 blocks stacked</td>
   </tr>
   <tr>
-    <td><video src="PASTE_SUCCESS_1_LINK" controls muted width="400"></video></td>
-    <td><video src="PASTE_SUCCESS_2_LINK" controls muted width="400"></video></td>
+    <td><video src="
+
+https://github.com/user-attachments/assets/73849d20-0ffb-45d2-afd2-c601e0be3ff7
+
+" controls muted width="400"></video></td>
+    <td><video src="
+
+https://github.com/user-attachments/assets/51f429a9-f5a2-4911-8c30-4fcdf620df65
+
+" controls muted width="400"></video></td>
   </tr>
 </table>
 
